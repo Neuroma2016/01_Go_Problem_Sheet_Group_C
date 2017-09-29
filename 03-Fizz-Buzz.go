@@ -11,9 +11,11 @@ func main() {
 
 	var num int
 
+	//user input
 	fmt.Println("Please enter the number:")
 	fmt.Scanf("%d", &num)
 
+	//for loop with other conditions
 	for i := 1; i <= num; i++ {
 
 		if i%3 == 0 && i%5 == 0 {
@@ -25,7 +27,5 @@ func main() {
 		} else {
 			fmt.Println(i)
 		}
-
 	}
-
 }
