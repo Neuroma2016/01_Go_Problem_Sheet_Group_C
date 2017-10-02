@@ -37,6 +37,9 @@ func main() {
 		} else if guess < 0 {
 			fmt.Println("Please enter a valid number!(0-100)")
 			counter--
+		} else if guess > 100 {
+			fmt.Println("Please enter a valid number!(0-100)")
+			counter--
 		} else if guess > num {
 			fmt.Println("Too High!")
 		} else if guess < num {
