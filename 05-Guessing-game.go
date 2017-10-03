@@ -10,7 +10,6 @@ import (
 )
 
 func main() {
-	temp := -1
 	guess := -1
 	counter := 0
 
@@ -25,15 +24,11 @@ func main() {
 		counter++
 		fmt.Scanf("%d", &guess)
 
-		//checks to see if previous guess is the same as new one
-		if temp == guess {
-			counter--
-		}
-
 		//checks users input against random number
 		if guess == num {
 			fmt.Println("Congrats! Correct number was :", num)
 			fmt.Println("It took you ", counter, "guesses.")
+			counter--
 		} else if guess < 0 {
 			fmt.Println("Please enter a valid number!(0-100)")
 			counter--
@@ -45,7 +40,7 @@ func main() {
 		} else if guess < num {
 			fmt.Println("Too Low!")
 		}
-		temp = guess
+		
 	} //for
 
 }
